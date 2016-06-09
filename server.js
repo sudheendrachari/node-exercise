@@ -4,12 +4,7 @@ const request = require('request-promise');
 const app = express();
 app.set('view engine', 'ejs');
 
-const API_BASE_URI = 'https://swapi.co/api/',
-		cache = {
-			people : [], 
-			planets : []
-		}, 
-		entityMap = new Map();
+const API_BASE_URI = 'https://swapi.co/api/', cache = { people : [], planets : [] }, entityMap = new Map();
 let preFetchPeoplePromise, preFetchPlanetsPromise;
 
 app.get('/', function(req, res) {
