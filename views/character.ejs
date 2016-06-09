@@ -1,0 +1,12 @@
+<p> <%= results.length %> characters(s) found </p>
+
+<% for(var i=0; i < results.length; i++) { %>
+<table>
+	<% for(var key in results[i]) { %>
+   <tr>
+     <td><%= key %> : <%= results[i][key] %></td>
+   </tr>
+   <% } %>
+</table>
+<hr>
+<% } %>
